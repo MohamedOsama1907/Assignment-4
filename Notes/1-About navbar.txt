@@ -1,0 +1,39 @@
+1-if the navbar has position fixed or absolute doesn't have the width from its parent 
+
+
+
+2- fixed بيخلع العنصر من الصفحة 
+يعني العنصر اللي بعده هييقيبي فوقه عشان يعتبر مش حاجز مكانه في الصفحة 
+الحل ؟؟   اننا ندي مارجينن او بادين توب 
+
+
+
+3- transform: translate(-4px, -4px);
+transform: rotate(2deg);  غلط 
+الحل ؟؟
+transform: translate(-4px, -4px) rotate(2deg);
+
+.box {
+  transform: rotate(2deg);
+}
+.box:hover {
+  transform: translate(-4px, -4px);
+} 
+طبيعي هنا عشان عامل ترانسفورم مرتينوالحل زي ما عملت قبل كدا
+
+
+4- if i want to put icon by before or after ==>
+   1-content: "\f005"; /* كود icon */
+   2-font-family: "Font Awesome 5 Free"; /* مهم جداً عشان الأيكون تظهر */
+   3-font-weight: 900; /* عشان تظهر Solid (مليانة) */
+
+
+5- ليه لما بعمل لبيرنت فلكس ؟؟ لما بعمل لواحد منن الابناء بوزيشن استيكي مع توب 
+مش هيتحرك ومش هيكون استيكي ؟؟
+لما تستخدم:
+display: flex;
+الـ default بيكون:
+align-items: stretch;
+يعني 👇
+كل العناصر جوا الـ flex:
+بتتمدد تاخد نفس ارتفاع الأب

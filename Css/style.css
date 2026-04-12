@@ -1,0 +1,629 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "EXO", sans-serif;
+}
+:root {
+  scroll-behavior: smooth;
+  --primary-color: #ffd15b;
+  --secondary-color: black;
+  --main-padding: 12px 24px;
+  --main-duration: 0.2s;
+}
+body {
+  margin: 0;
+  font-family: "EXO", sans-serif;
+}
+::selection {
+  background-color: var(--primary-color,);
+  color: var(--secondary-color);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+ul {
+  padding: 0;
+}
+img {
+  width: 100%;
+}
+button {
+  cursor: pointer;
+  border: unset;
+  color: inherit;
+  display: block;
+  outline: none;
+}
+.container {
+  width: 95%;
+  margin: auto;
+}
+.home {
+  position: relative;
+  background-color: #fff085;
+  border-bottom: 4px solid var(--secondary-color);
+  padding-bottom: 40px;
+}
+.boxes {
+  position: absolute;
+  opacity: 0.1;
+}
+.box1 {
+  width: calc(4 * 32px);
+  height: calc(4 * 32px);
+  left: 40px;
+  top: 40px;
+  transform: rotate(12deg);
+  background-color: var(--secondary-color);
+}
+
+.box2 {
+  width: calc(4 * 24px);
+  height: calc(4 * 24px);
+  right: 50px;
+  top: 160px;
+  transform: rotate(-45deg);
+  background-color: #fb2c36;
+}
+.box3 {
+  width: calc(4 * 28px);
+  height: calc(4 * 28px);
+  left: calc(100% / 3);
+  bottom: 100px;
+  transform: rotate(-45deg);
+  background-color: #2b7fff;
+}
+.navbar {
+  position: fixed;
+  /* to make the nabar inherits the width form its parent (container)...> when element has position fixed or absolute deal with Viewport  */
+  width: inherit;
+  display: flex;
+  z-index: 100;
+  justify-content: space-between;
+  background-color: white;
+  padding: var(--main-padding);
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid var(--secondary-color);
+  top: 16px;
+}
+.navbar .logo a {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 800;
+}
+.logo a span {
+  color: #f97200;
+}
+.navbar .links {
+  display: none;
+  column-gap: 40px;
+}
+.links li {
+  position: relative;
+}
+
+/* the method to add icon by pesoudo element */
+.links li:not(:last-of-type)::after {
+  position: absolute;
+  content: "\f005";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 14px;
+  color: #d1d5dc;
+  transform: translate(60%, 25%);
+}
+
+.navbar .links a {
+  line-height: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: color var(--main-duration) ease-in;
+}
+.navbar .links a:hover {
+  color: #f97200;
+}
+.navbar .subscribe button {
+  display: none;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 3.40282e38px;
+  padding: var(--main-padding);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  transition: transform var(--main-duration) ease-in;
+}
+
+/* in responsive */
+.burgerMenu {
+  display: flex;
+  width: 42px;
+  height: 42px;
+  border: 2px solid var(--secondary-color);
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  box-shadow: 3px 3px var(--secondary-color);
+}
+.burgerMenu i {
+  font-size: 24px;
+  font-weight: 900;
+}
+
+.navbar .subscribe button:hover {
+  transform: translate(4px, 4px);
+}
+.home-content {
+  padding-top: 230px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.content {
+  max-width: 100%;
+}
+.title {
+  position: relative;
+}
+.title h1 {
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 90px;
+  text-shadow: 3px 3px var(--secondary-color);
+  max-width: 512px;
+  margin-bottom: 32px;
+}
+.red-word {
+  color: #e7000b;
+}
+.blue-word {
+  color: #155dfc;
+}
+.title div {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  top: -25%;
+  position: absolute;
+  padding: 12px 20px;
+  background-color: var(--secondary-color);
+  box-shadow: 3px 3px var(--secondary-color);
+  color: white;
+  transform: rotate(-2deg);
+}
+.about-home {
+  padding: 16px;
+  border: 2px solid var(--secondary-color);
+  box-shadow: 3px 3px var(--secondary-color);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 32px;
+  background-color: white;
+  z-index: 2;
+  position: relative;
+}
+.inner-image {
+  position: relative;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.home-image {
+  width: 100%;
+  height: 400px;
+  border: 4px solid var(--secondary-color);
+  box-shadow: 6px 6px var(--secondary-color);
+  transition: transform var(--main-duration) ease-in;
+}
+
+.home-image:hover {
+  /* i can't use 2 transform in 2 lines .. the answer */
+  transform: translate(-4px, -4px);
+}
+.features {
+  border: 3px solid var(--secondary-color);
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  transform: rotate(12deg);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 12px 20px;
+  background-color: #fb2c36;
+  box-shadow: 3px 3px var(--secondary-color);
+  color: white;
+}
+.home-image img {
+  object-fit: cover;
+  height: 100%;
+}
+.buttons {
+  display: flex;
+  column-gap: 20px;
+}
+.buttons button {
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  box-shadow: 6px 6px var(--secondary-color);
+  border: 4px solid var(--secondary-color);
+  transition: all var(--main-duration) ease-in;
+  z-index: 2;
+  position: relative;
+  margin-bottom: 40px;
+}
+.buttons button:hover {
+  transform: translate(6px, 6px);
+  box-shadow: 0 0;
+}
+.buttons i {
+  margin-right: 4px;
+}
+.button-1 {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.button-2 {
+  background-color: white;
+  color: var(--secondary-color);
+}
+.latestArticles {
+  padding: 70px 0;
+}
+.latestArticles .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.latestArticles .left-content {
+  width: 100%;
+  position: relative;
+}
+.left-content .freshContent {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  box-shadow: 4px 4px black;
+  transform: rotate(2deg);
+}
+.left-content h2 {
+  line-height: 48px;
+  font-weight: 900;
+  font-size: 48px;
+  margin-bottom: 50px;
+}
+.content-card {
+  display: flex;
+  justify-content: space-between;
+  transition: all var(--main-duration) ease-in;
+}
+.content-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px;
+}
+.content-card .articlesImage {
+  width: 25%;
+  height: 128px;
+  border: 3px solid black;
+  position: relative;
+}
+.content-card .articlesImage::after {
+  color: white;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 8px;
+  position: absolute;
+  border: 2px solid black;
+}
+.card1 .articlesImage::after {
+  content: "NEW";
+  background-color: #fb2c36;
+  right: -8px;
+  transform: translateY(-50%) rotate(7deg);
+}
+.card2 .articlesImage::after {
+  content: "HOT";
+  background-color: #2b7fff;
+  right: -8px;
+  transform: translateY(-50%) rotate(-7deg);
+}
+.card3 .articlesImage::after {
+  content: "VIRAL";
+  background-color: #ad46ff;
+  right: -10px;
+  transform: translateY(-45%) rotate(45deg);
+}
+.articlesImage img {
+  height: 100%;
+  object-fit: cover;
+}
+.content-card .articleContent {
+  width: 70%;
+  position: relative;
+}
+.articleContent span.tech {
+  position: absolute;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #ffdf20;
+  border: 2px solid;
+  transform: rotate(-2deg);
+  box-shadow: 3px 3px;
+  padding: 4px 8px;
+  top: -10px;
+}
+.articleContent span.design {
+  position: absolute;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #7bf1a8;
+  border: 2px solid;
+  transform: rotate(2deg);
+  box-shadow: 3px 3px;
+  padding: 4px 8px;
+  top: -10px;
+}
+.articleContent span.culture {
+  position: absolute;
+  line-height: 16px;
+  font-size: 12px;
+  font-weight: 700;
+  background-color: #fda5d5;
+  border: 2px solid;
+  transform: rotate(-3deg);
+  box-shadow: 3px 3px;
+  padding: 4px 8px;
+  top: -10px;
+}
+.articleContent h3 {
+  margin: 35px 0 15px;
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 700;
+  transition: color var(--main-duration) ease-in;
+}
+.card1:hover .articleContent h3 {
+  color: #e7000b;
+}
+.card2:hover .articleContent h3 {
+  color: #2b7fff;
+}
+.card3:hover .articleContent h3 {
+  color: #ad46ff;
+}
+.articleContent p {
+  line-height: 29px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.aboutArticles {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.aboutArticles span {
+  width: 30%;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.aboutArticles span:last-child {
+  color: #e7000b;
+  width: 10%;
+}
+.articlesButton button {
+  padding: 16px 48px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  box-shadow: 4px 4px black;
+  transition: all var(--main-duration) ease-in;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.articlesButton button:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0;
+}
+
+.latestArticles .right-content {
+  width: 100%;
+}
+.trending {
+  display: flex;
+  flex-direction: column;
+}
+.trending h3 {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.trending > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.trending > div > span {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 40px;
+  margin-right: 18px;
+}
+.trend1 > span {
+  color: #fb2c36;
+}
+.trend2 > span {
+  color: #2b7fff;
+}
+.trend3 > span {
+  color: #ad46ff;
+}
+.trending .trendName h4 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  transition: all var(--main-duration) ease-in;
+}
+.trend1:hover h4 {
+  color: #fb2c36;
+}
+.trend2:hover h4 {
+  color: #2b7fff;
+}
+.trend3:hover h4 {
+  color: #ad46ff;
+}
+.trending .trendName span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #848484;
+}
+.right-content .categories h3 {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+.right-content .categories > div {
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  border: 2px solid;
+  margin-bottom: 10px;
+  transition: all var(--main-duration) ease-in;
+}
+.right-content .categories > div:hover {
+  box-shadow: 4px 4px;
+  transform: translate(-4px, -4px);
+}
+.category1 {
+  background-color: #fef9c2;
+}
+.category1:hover {
+  background-color: #ffdf20;
+}
+.category2 {
+  background-color: #dbfce7;
+}
+.category2:hover {
+  background-color: #7bf1a8;
+}
+.category3 {
+  background-color: #fce7f3;
+}
+.category3:hover {
+  background-color: #fda5d5;
+}
+.category4 {
+  background-color: #dbeafe;
+}
+.category4:hover {
+  background-color: #8ec5ff;
+}
+.category5 {
+  background-color: #f3e8ff;
+  margin-bottom: 0px;
+}
+.category5:hover {
+  background-color: #dab2ff;
+}
+
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 92%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .container {
+    width: 87%;
+  }
+  .home-content {
+    flex-direction: row;
+  }
+  .home-content .content {
+    width: 50%;
+    margin-bottom: 0px;
+  }
+  .home-content .inner-image {
+    width: 44%;
+    margin-bottom: 0px;
+  }
+  .home-image {
+    width: 100%;
+    height: 400px;
+    border: 4px solid var(--secondary-color);
+    box-shadow: 6px 6px var(--secondary-color);
+    transform: rotate(2deg);
+    transition: transform var(--main-duration) ease-in;
+  }
+  .home-image:hover {
+    transform: translate(-4px, -4px) rotate(2deg);
+  }
+  .latestArticles .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .latestArticles .left-content {
+    width: 67%;
+  }
+  .latestArticles .right-content {
+    width: 30%;
+    position: sticky;
+    top: 100px;
+    /* becuase the container has flex, and by default the child has align-items: stretch; to solve this problem .. */
+    align-self: flex-start;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .navbar .links {
+    display: flex;
+  }
+  .navbar .subscribe button {
+    display: block;
+  }
+  .burgerMenu {
+    display: none;
+  }
+}
+
+/* class like title */
+.shadow {
+  border: 4px solid black;
+  box-shadow: 4px 4px black;
+  padding: 35px;
+  margin-bottom: 40px;
+}
