@@ -1,3 +1,5 @@
+.. position fixed doesn't recpect margin auto so we should give it left 
+
 1-if the navbar has position fixed or absolute doesn't have the width from its parent 
 
 
