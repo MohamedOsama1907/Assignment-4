@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/jjjj.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <!-- Logo -->
+        <a href="#" class="logo">UX Review</a>
+
+        <!-- Menu Icon (Mobile) -->
+        <a href="#menu" class="menu-icon">☰</a>
+
+        <!-- Navigation Links -->
+        <ul id="menu" class="nav-links">
+          <!-- Close Icon -->
+          <a href="#" class="close-icon">✖</a>
+
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Authors</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#" class="btn">Subscribe</a></li>
+        </ul>
+
+        <!-- Overlay -->
+        <a href="#" class="overlay"></a>
+      </div>
+    </nav>
+  </body>
+</html>
+
+* { margin: 0; padding: 0; box-sizing: border-box; } body { font-family: Arial,
+sans-serif; } /* Navbar */ .navbar { position: sticky; top: 0; background: #fff;
+border-bottom: 1px solid #eee; z-index: 1000; } /* Container */ .container {
+width: 90%; margin: auto; display: flex; justify-content: space-between;
+align-items: center; height: 70px; } /* Logo */ .logo { font-size: 22px;
+font-weight: bold; text-decoration: none; color: #111; } /* Links */ .nav-links
+{ list-style: none; display: flex; gap: 20px; align-items: center; } .nav-links
+li a { text-decoration: none; color: #333; transition: 0.3s; } .nav-links li
+a:hover { color: #000; } /* Button */ .btn { padding: 8px 16px; background:
+black; color: white !important; border-radius: 6px; } /* Icons */ .menu-icon,
+.close-icon { display: none; font-size: 24px; cursor: pointer; text-decoration:
+none; color: #111; } /* Overlay */ .overlay { display: none; } /*
+===================== */ /* 📱 Mobile Responsive */ /* ===================== */
+@media (max-width: 768px) { .menu-icon { display: block; } .nav-links {
+position: fixed; top: 0; right: -100%; width: 250px; height: 100vh; background:
+#111; flex-direction: column; padding-top: 80px; gap: 25px; transition: 0.3s; }
+.nav-links li a { color: white; } .close-icon { display: block; position:
+absolute; top: 15px; left: 15px; color: white; } /* فتح المينيو */ #menu:target
+{ right: 0; } /* Overlay عند الفتح */ #menu:target ~ .overlay { display: block;
+position: fixed; inset: 0; background: rgba(0, 0, 0, 0.5); } }

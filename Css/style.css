@@ -40,7 +40,7 @@ button {
   outline: none;
 }
 .container {
-  width: 94%;
+  width: 91%;
   margin: auto;
 }
 .shadow {
@@ -69,7 +69,7 @@ button {
 .sectionTitle h2 {
   font-size: 36px;
   line-height: 36px;
-  line-height: 48px;
+  font-weight: 900;
   margin-bottom: 15px;
 }
 .sectionTitle p {
@@ -364,11 +364,12 @@ button {
   transform: rotate(2deg);
 }
 .left-content h2 {
-  line-height: 48px;
+  line-height: 36px;
   font-weight: 900;
-  font-size: 48px;
+  font-size: 36px;
   margin-bottom: 50px;
 }
+
 .content-card {
   background-color: white;
   display: flex;
@@ -463,7 +464,7 @@ button {
 .articleContent h3 {
   margin: 35px 0 15px;
   line-height: 32px;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 700;
   transition: color var(--main-duration) ease-in;
 }
@@ -477,25 +478,53 @@ button {
   color: #ad46ff;
 }
 .articleContent p {
-  line-height: 29px;
-  font-size: 18px;
+  line-height: 21px;
+  font-size: 14px;
   font-weight: 400;
   margin-bottom: 20px;
 }
 .aboutArticles {
   display: flex;
-  flex-wrap: nowrap;
+  flex-direction: column;
+  row-gap: 5px;
+  flex-wrap: wrap;
 }
+@media screen and (max-width: 650px) {
+  .aboutArticles span {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 651px) {
+  .aboutArticles {
+    flex-direction: row;
+  }
+  .aboutArticles span {
+    width: 50%;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .aboutArticles span {
+    width: 30%;
+  }
+  .aboutArticles span:last-child {
+    color: #e7000b;
+    width: 10%;
+  }
+}
+
 .aboutArticles span {
-  width: 30%;
+  /* width: 30%; */
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
 }
-.aboutArticles span:last-child {
-  color: #e7000b;
-  width: 10%;
-}
+
 .articlesButton button {
   padding: 16px 48px;
   background-color: var(--secondary-color);
@@ -505,8 +534,7 @@ button {
   line-height: 28px;
   box-shadow: 4px 4px black;
   transition: all var(--main-duration) ease-in;
-  margin: auto;
-  margin-bottom: 30px;
+  margin: 60px auto 36px;
 }
 .articlesButton button:hover {
   transform: translate(4px, 4px);
@@ -526,6 +554,7 @@ button {
   font-weight: 900;
   line-height: 36px;
   margin-bottom: 20px;
+  margin-bottom: 6px;
 }
 .trending > div {
   display: flex;
@@ -712,22 +741,22 @@ button {
 }
 
 .authorCards .authorContent h3 {
-  font-size: 26px;
+  font-size: 23px;
   font-weight: 900;
-  line-height: 32px;
+  line-height: 27px;
   margin: 20px 0 10px;
   transition: all var(--main-duration) ease-in;
 }
 .authorCards .authorContent span {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 21px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
   color: #525252;
 }
 .authorCards .authorContent p {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 23px;
+  line-height: 20px;
   margin: 20px 0;
 }
 .socialMedia {
@@ -813,15 +842,15 @@ button {
   margin-bottom: 30px;
 }
 .communityContent .leftCommunity h3 {
-  font-size: 36px;
+  font-size: 27px;
   font-weight: 900;
-  line-height: 40px;
-  margin: 50px 0 25px;
+  line-height: 30px;
+  margin: 25px 0 25px;
 }
 .communityContent .leftCommunity > p {
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
-  line-height: 33px;
+  line-height: 24px;
   border: 2px solid var(--secondary-color);
   padding: 32px;
   box-shadow: 3px 3px var(--secondary-color);
@@ -847,6 +876,11 @@ button {
   width: 50px;
   color: white;
   border: 2px solid var(--secondary-color);
+}
+.aboutCommunity > div p {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
 }
 .aboutCommunity > div span.check {
   background-color: #fb2c36;
@@ -883,9 +917,9 @@ button {
   background-color: white;
 }
 .rightCommunity h3 {
-  font-size: 36px;
+  font-size: 23px;
   font-weight: 900;
-  line-height: 40px;
+  line-height: 27px;
   margin-bottom: 32px;
 }
 .rightCommunity > div {
@@ -909,9 +943,9 @@ button {
   margin-bottom: 0px;
 }
 .rightCommunity > div p {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 29px;
+  line-height: 22px;
   margin-bottom: 15px;
 }
 .rightCommunity > div .abotWriter {
@@ -930,9 +964,9 @@ button {
   object-fit: cover;
 }
 .rightCommunity .writerInfo h4 {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 21px;
 }
 .rightCommunity .writerInfo span {
   font-size: 14px;
@@ -979,14 +1013,14 @@ button {
   margin-bottom: 30px;
 }
 .footerContnet .leftFooter h2 {
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 900;
-  line-height: 36px;
+  line-height: 27px;
 }
 .footerContnet .leftFooter p {
-  font-size: 19px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 22px;
 }
 
 .middleFooter {
@@ -994,18 +1028,18 @@ button {
 }
 
 .middleFooter h3 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 900;
-  line-height: 32px;
+  line-height: 18px;
   margin-bottom: 28px;
 }
 .middleFooter ul li {
   margin-bottom: 16px;
 }
 .middleFooter ul a {
-  font-size: 19px;
+  font-size: 14px;
   font-weight: 600;
-  line-height: 30px;
+  line-height: 21px;
   transition: color var(--main-duration) ease-in;
 }
 .middleFooter ul a:hover {
@@ -1015,23 +1049,23 @@ button {
   flex-grow: 2;
 }
 .footerContnet .rightFooter h3 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 900;
-  line-height: 32px;
+  line-height: 18px;
   margin-bottom: 28px;
 }
 .footerContnet .rightFooter p {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 29px;
+  line-height: 22px;
   margin-bottom: 16px;
 }
 .rightFooter form input {
   width: 100%;
   padding: 16px;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 28px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
   border: 1px solid white;
   margin-bottom: 24px;
   background-color: black;
@@ -1048,9 +1082,9 @@ button {
   padding: 16px 0;
   background-color: #ffdf20;
   color: var(--secondary-color);
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 21px;
   box-shadow: 2px 2px 4px var(--secondary-color) inset;
   box-shadow: -4px -4px 0 0 rgba(0, 0, 0, 0.2) inset;
   transition: all var(--main-duration) ease-in;
@@ -1094,6 +1128,12 @@ button {
   .container {
     width: 92%;
   }
+  .sectionTitle h2 {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 40px;
+    margin-bottom: 15px;
+  }
   .title h1 {
     font-size: 72px;
     font-weight: 900;
@@ -1104,13 +1144,73 @@ button {
     width: 90%;
   }
   .sectionTitle h2 {
-    font-size: 42px;
+    font-size: 48px;
     font-weight: 900;
     line-height: 40px;
     margin-bottom: 15px;
   }
   .left-content .freshContent {
     display: block;
+  }
+  .left-content h2 {
+    line-height: 48px;
+    font-weight: 900;
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+  .articleContent h3 {
+    font-size: 24px;
+  }
+  .articleContent p {
+    font-size: 18px;
+    line-height: 29px;
+  }
+  .authorCards .authorContent h3 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 32px;
+  }
+  .authorCards .authorContent span {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+  .authorCards .authorContent p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 23px;
+  }
+  .leftCommunity h3 {
+    font-size: 36px;
+    line-height: 40px;
+    margin: 50px 0 25px;
+  }
+  .communityContent .leftCommunity > p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 33px;
+  }
+  .aboutCommunity > div p {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25px;
+  }
+  .rightCommunity h3 {
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 32px;
+    margin-bottom: 32px;
+  }
+  .rightCommunity > div p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 29px;
+    margin-bottom: 15px;
+  }
+  .rightCommunity .writerInfo h4 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
   }
   .footer .footerContnet {
     flex-direction: row;
@@ -1121,13 +1221,56 @@ button {
     margin-bottom: 30px;
   }
   .footerContnet .middleFooter {
-    /* flex: 1; */
-    width: 30%;
+    /* flex: 1; 
+    كدا كدا هيا فليكس 1
+    nothing
+    */
   }
   .footerContnet .rightFooter {
     width: 70%;
     /* flex: 2; */
   }
+  .footerContnet .leftFooter h2 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 36px;
+  }
+  .footerContnet .leftFooter p {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .middleFooter h3 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    margin-bottom: 28px;
+  }
+  .middleFooter ul a {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 30px;
+  }
+
+  .rightFooter h3 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    margin-bottom: 28px;
+  }
+  .footerContnet .rightFooter p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+  }
+  .rightFooter form input,
+  .rightFooter form button {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
   .about-home {
     padding: 16px;
     font-size: 24px;
@@ -1187,6 +1330,11 @@ button {
   .communityContent .rightCommunity {
     flex: 1;
   }
+  .rightCommunity h3 {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 40px;
+  }
   .footerContnet .leftFooter {
     flex: 2;
   }
@@ -1227,6 +1375,7 @@ button {
   .latestArticles .left-content .articleContent {
     width: 70%;
   }
+
   .latestArticles .right-content {
     width: 30%;
     position: sticky;
