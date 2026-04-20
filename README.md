@@ -1,42 +1,65 @@
-# Assignment-4
-📰 The UX Review – Landing Page
+# Assignment-3 – Route Academy(🚁 DJI Mavic 4 Pro Landing Page)
 
-A fully responsive blog landing page built using HTML5 & modern CSS, recreating a real UX blog design without any frameworks.
-Developed as part of Route Academy Assignment 4.
+A responsive product landing page built using **HTML5 & CSS3**, showcasing a modern UI for a professional drone product.
 
-🔗 Live Demo
+## 📌 Features
 
-👉 https://mohamedosama1907.github.io/Assignment-4/
+* Fully responsive design (Mobile → Tablet → Desktop)
+* Built using **Float-based layout** (as required)
+* Clean and structured HTML layout
+* Modern UI inspired by real e-commerce product pages
 
-📁 Repository
+---
 
-👉 https://github.com/MohamedOsama1907/Assignment-4
+## 🛠️ Technologies Used
 
-✨ Features
-Responsive layout (Mobile → Desktop)
-Sticky navigation bar with mobile menu
-Clean, modern blog UI
-Multi-section structured layout
-Hover effects and smooth transitions
-🧱 Sections
-Navbar – Fixed & responsive with mobile menu
-Hero – Two-column layout (content + image)
-Latest Articles – Cards + sidebar
-Authors – 3-column grid
-Community – Benefits + testimonials
-Footer – About, links, newsletter
-🎯 What I Practiced
-Flexbox layouts
-Responsive design (media queries)
-CSS positioning & stacking
-Box model & box-sizing
-Pseudo-elements & hover effects
-Transitions & transforms
-📱 Breakpoints
-Mobile: Default
-Tablet: 767px+
-Desktop: 1024px+
-Large: 1370px+
-🚀 Outcome
+* HTML5
+* CSS3
+* Font Awesome (icons)
+* Google Fonts
 
-Built a complete blog landing page using pure CSS, focusing on clean structure, responsiveness, and modern UI practices.
+---
+
+## 🎯 What I Practiced
+
+* Using **float & clear** to build layouts
+* Creating responsive layouts with **media queries**
+* Building reusable components (cards, sections)
+* Styling tables and handling overflow
+* Using pseudo-elements (`::before`, `::after`)
+* Creating hover effects and transitions
+* Structuring a full landing page from scratch
+
+---
+
+## 📱 Responsive Breakpoints
+
+* Mobile: Default
+* Tablet: `min-width: 767px`
+* Desktop: `min-width: 1024px`
+* Large Screens: `min-width: 1370px`
+
+---
+## 🔗 Live Demo
+
+👉 https://mohamedosama1907.github.io/Assignment-3/
+
+## 📁 Repository
+
+👉 https://github.com/MohamedOsama1907/Assignment-3
+
+---
+## 💡 Notes
+
+* This project focuses on mastering **float-based layouts** instead of Flexbox/Grid.
+* Shadows and animations are not included yet (planned for future improvements).
+
+---
+
+## 🚀 Future Improvements
+
+* Add animations and transitions
+* Improve accessibility
+* Refactor layout using Flexbox/Grid
+* Enhance UI with shadows and depth
+
