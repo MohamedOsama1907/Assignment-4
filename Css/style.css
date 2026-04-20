@@ -801,13 +801,13 @@ button {
 .author3 {
   background-color: #fce7f3;
 }
-.authorCards > div:hover h3 {
+.author1:hover h3 {
   color: #fb2c36;
 }
-.authorCards > div:hover h3 {
+.author2:hover h3 {
   color: #2b7fff;
 }
-.authorCards > div:hover h3 {
+.author3:hover h3 {
   color: #ad46ff;
 }
 .authorCards > div:hover {
